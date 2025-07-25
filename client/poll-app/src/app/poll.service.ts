@@ -11,7 +11,7 @@ import { Poll } from './poll.models';
   providedIn: 'root' // this makes it a singleton service available through out the app
 })
 export class PollService {
-  private baseUrl = 'http://localhost:8080/api/polls'; // baseurl for api endpoint
+  private baseUrl = 'http://localhost:8082/api/polls'; // baseurl for api endpoint
 
   constructor(private http: HttpClient) { } // injects HttpClient as a private dependency for making http requests
 
