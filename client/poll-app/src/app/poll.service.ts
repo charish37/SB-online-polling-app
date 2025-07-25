@@ -24,6 +24,6 @@ export class PollService {
   }
 
   vote(pollId: number, optionIndex: number): Observable<void> {
-    return this.http.post<void>(`${this.baseUrl}/vote`,{ pollId, optionIndex });
+    return this.http.post<void>(`${this.baseUrl}/vote`,{ pollId, optionIndex }); //if we have more than one value to pass as request body we have to pass them as an object
   }
 }
