@@ -18,4 +18,8 @@ export class PollService {
   createPoll(poll: Poll): Observable<Poll> { // create a poll by taking poll as parameter and returns an Observable<poll> which is an async response.
     return this.http.post<Poll>(this.baseUrl, poll); // makes a POST request to the backend API with the poll data
   }
+
+  getPolls(): Observable<Poll[]> { // getting array of polls
+    return this.http.get<Poll[]>(this.baseUrl);
+  }
 }
