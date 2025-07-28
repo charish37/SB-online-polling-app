@@ -1,0 +1,27 @@
+Online Polling App - Learning Notes
+
+Architecture Overview
+
+Backend(Spring Boot)
+Techn:- SB with JPA/Hibernate
+Database: MySQL
+Port: 8082
+API URL: http://localhost:8082/api/polls
+
+Frontend(ANgular)
+Techn:- Angular 20+ with standalone applications
+Port: 4200 (default ang dev server)
+State management:- Componnet based with RXJS observables
+
+@ElementCollection --> Creates a seperate table for embedded objects.
+
+@Embeddable --> value object stored in parent table.
+
+@CrossOrigin --> Handles CORS for frontend communication.
+subscribe(): Method to handle RxJS Observables
+next: Executes when data successfully arrives
+error: Executes when HTTP request fails
+Used for asynchronous operations (HTTP requests)
+
+Frontend Component → Service → HTTP Request → Backend Controller → Service → Repository → Database
+                  ←         ← HTTP Response ←  
